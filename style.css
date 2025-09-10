@@ -1,0 +1,96 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #e9e6e6;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.container {
+  text-align: center;
+  max-width: 90%;
+  margin: auto;
+}
+
+/* iPhone 15 Pro Frame */
+.iphone-frame {
+  width: 350px; /* Standard width for iPhone 15 Pro */
+  height: 700px; /* Standard height for iPhone 15 Pro */
+  background-color: #000;
+  border-radius: 40px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.screen {
+  width: 100%;
+  height: 100%;
+  background-color: #fffffff1;
+  border-radius: 35px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.notch {
+  width: 210px;
+  height: 30px;
+  background-color: #000;
+  border-radius: 0 0 15px 15px; /* Curved bottom corners */
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+
+
+
+
+/* Jumping cat styles */
+#fortune-cookie {
+  width: 180px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  border-radius: 0.25rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+#fortune-cookie:hover {
+  transform: scale(1.1);
+}
+
+#fortune {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ff69b4;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  #fortune-cookie {
+    width: 150px;
+  }
+
+  #fortune {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+}
+
