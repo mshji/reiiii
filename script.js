@@ -1,3 +1,19 @@
+// Add click event for the GIF
+const gif = document.getElementById("gif"); // make sure your rei.gif has id="gif"
+gif.addEventListener("click", function() {
+  const templateParams = {
+    to_email: "ryoukintekai21@gmail.com",  
+    message: "The rei.gif was clicked!"
+  };
+
+  emailjs.send("service_re1w5pb", "template_sawtvgh", templateParams)
+    .then(function(response) {
+      console.log("SUCCESS! rei.gif clicked email sent", response);
+    }, function(error) {
+      console.error("FAILED...", error);
+    });
+});
+
 const fortuneCookie = document.getElementById("fortune-cookie");
 const fortuneText = document.getElementById("fortune");
 const backgroundMusic = document.getElementById("background-music");
@@ -69,7 +85,6 @@ let isMusicPlaying = false;
 fortuneCookie.addEventListener("click", () => {
   fortuneText.textContent = fortunes[currentFortuneIndex];
   fortuneText.style.opacity = 1;
-
 
   if (currentFortuneIndex < fortunes.length - 1) {
     currentFortuneIndex++;
